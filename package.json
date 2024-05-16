@@ -1,0 +1,31 @@
+{
+  "name": "k6_performance_testing",
+  "version": "1.0.0",
+  "description": "Performance Testing Framework for PetStore API using K6",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "testEnvNFT:Load_UC_SI_1": "k6 run --out statsd --env K6_STATSD_ENABLE_TAGS=true -e K6_STATSD_ADDR=18.135.20.117:8125 --env environment=NFT --env testtype=Load --tag test_run_id=SI_18 STS15/Scripts/SI_1_Initiate_Quote_by_Organiser.js --summary-trend-stats=med,avg,max,min,p(90),p(95),p(99)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TharushikaR/K6_Performance_Testing.git"
+  },
+  "keywords": [
+    "K6",
+    "Performance",
+    "Testing"
+  ],
+  "author": "R.M.P.T.Rathnayaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TharushikaR/K6_Performance_Testing/issues"
+  },
+  "homepage": "https://github.com/TharushikaR/K6_Performance_Testing#readme",
+  "dependencies": {
+    "@types/k6": "^0.51.0"
+  }
+}
